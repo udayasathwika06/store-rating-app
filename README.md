@@ -224,12 +224,6 @@ All seeded accounts use the password: `Password123!`
 
 ---
 
-## Project Screenshots
 
-> Screenshots placeholder — add screenshots of the Login, Admin Dashboard, User Dashboard, and Store Owner Dashboard here.
-
----
-
-## License
 
 ISC
