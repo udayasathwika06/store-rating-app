@@ -5,13 +5,13 @@ const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>_\-+=/[\]\\
 const registerValidation = [
   body('name')
     .trim()
-    .isLength({ min: 20, max: 60 })
-    .withMessage('Name must be between 20 and 60 characters'),
+    .isLength({ min: 2, max: 60 })
+    .withMessage('Name must be between 2 and 60 characters'),
   body('email')
     .trim()
     .isEmail()
     .withMessage('Must be a valid email address')
-    .normalizeEmail(),
+    .toLowerCase(),
   body('address')
     .trim()
     .isLength({ max: 400 })
@@ -28,7 +28,7 @@ const loginValidation = [
     .trim()
     .isEmail()
     .withMessage('Must be a valid email address')
-    .normalizeEmail(),
+    .toLowerCase(),
   body('password')
     .notEmpty()
     .withMessage('Password is required'),

@@ -52,12 +52,12 @@ const Register = () => {
               <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
               <input
                 type="text"
-                placeholder="Full Name (20-60 characters)"
+                placeholder="Full Name (2-60 characters)"
                 {...register('name', {
                   required: 'Full name is required',
                   minLength: {
-                    value: 20,
-                    message: 'Name must be at least 20 characters',
+                    value: 2,
+                    message: 'Name must be at least 2 characters',
                   },
                   maxLength: {
                     value: 60,

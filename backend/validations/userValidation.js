@@ -5,13 +5,13 @@ const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>_\-+=/[\]\\
 const userCreateValidation = [
   body('name')
     .trim()
-    .isLength({ min: 20, max: 60 })
-    .withMessage('Name must be between 20 and 60 characters'),
+    .isLength({ min: 2, max: 60 })
+    .withMessage('Name must be between 2 and 60 characters'),
   body('email')
     .trim()
     .isEmail()
     .withMessage('Must be a valid email address')
-    .normalizeEmail(),
+    .toLowerCase(),
   body('password')
     .isLength({ min: 8, max: 16 })
     .withMessage('Password must be between 8 and 16 characters')
